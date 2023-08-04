@@ -8,10 +8,9 @@ sus respectivos precios durante los últimos 5 años (2018, 2019, 2020 ,2021, 20
 cuales son ingresados por teclado (validar que el valor que se introduce sea positivo, si
 introduce valores negativos o cero debe mostrar mensaje que solo se permiten valores
 positivos y permitirle digitar nuevamente el precio). Mostrar:
-• Mediante una función la Lista de autos con sus respectivos precios de cada año
-• Mediante una función los autos más baratos de cada año
-• Mediante una función el promedio de los autos que cuestan entre 30 y 50
-millones del año seleccionado por el usuario.
+  - Mediante una función la Lista de autos con sus respectivos precios de cada año
+  - Mediante una función los autos más baratos de cada año
+  - Mediante una función el promedio de los autos que cuestan entre 30 y 50 millones del año seleccionado por el usuario.
 
 - Generar sin POO, un programa que por cada día de la semana (lunes a domingo)
 acumula la cantidad de ventas totales diarias de una empresa, la empresa tiene 6
