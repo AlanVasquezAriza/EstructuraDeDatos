@@ -64,7 +64,7 @@ public class App {
             
             // Valida que se coloque un numero 
             for (int i = 0; i < 4; i++) {
-                String casoS = JOptionPane.showInputDialog("1. Mostrar autos \n2. Autos mas baratos \n3. Vehiculos entre 30 - 50 millones \n4. Salir");
+                String casoS = JOptionPane.showInputDialog("1. Mostrar autos \n2. Autos mas baratos \n3. Vehiculos por rango de precio \n4. Salir");
                 if(casoS != null && casoS.matches("[0-9]+")){
                     caso = Integer.parseInt(casoS);
                     break;
@@ -118,7 +118,7 @@ public class App {
                         }
                     }
 
-                    int minimo = 99999999;
+                    int Valorminimo = PrecioVehiculos[0][0];
                     int vehiculo = 0;
 
                     switch (caso) {
@@ -126,8 +126,8 @@ public class App {
                         case 1:
                     
                             for (int i = 0; i < PrecioVehiculos.length; i++) {
-                                if (PrecioVehiculos[i][0] < minimo) {
-                                    minimo = PrecioVehiculos[i][0];
+                                if (PrecioVehiculos[i][0] < Valorminimo) {
+                                    Valorminimo = PrecioVehiculos[i][0];
                                     vehiculo = i;
                                 }
                             }
@@ -137,8 +137,8 @@ public class App {
                         case 2:
                     
                             for (int i = 0; i < PrecioVehiculos.length; i++) {
-                                if (PrecioVehiculos[i][0] < minimo) {
-                                    minimo = PrecioVehiculos[i][1];
+                                if (PrecioVehiculos[i][1] < Valorminimo) {
+                                    Valorminimo = PrecioVehiculos[i][1];
                                     vehiculo = i;
                                 }
                             }
@@ -148,8 +148,8 @@ public class App {
                         case 3:
 
                             for (int i = 0; i < PrecioVehiculos.length; i++) {
-                                if (PrecioVehiculos[i][0] < minimo) {
-                                    minimo = PrecioVehiculos[i][2];
+                                if (PrecioVehiculos[i][2] < Valorminimo) {
+                                    Valorminimo = PrecioVehiculos[i][2];
                                     vehiculo = i;
                                 }
                             }
@@ -159,8 +159,8 @@ public class App {
                         case 4:
 
                             for (int i = 0; i < PrecioVehiculos.length; i++) {
-                                if (PrecioVehiculos[i][0] < minimo) {
-                                    minimo = PrecioVehiculos[i][3];
+                                if (PrecioVehiculos[i][3] < Valorminimo) {
+                                    Valorminimo = PrecioVehiculos[i][3];
                                     vehiculo = i;
                                 }
                             }
@@ -170,8 +170,8 @@ public class App {
                         case 5:
 
                             for (int i = 0; i < PrecioVehiculos.length; i++) {
-                                if (PrecioVehiculos[i][0] < minimo) {
-                                    minimo = PrecioVehiculos[i][4];
+                                if (PrecioVehiculos[i][4] < Valorminimo) {
+                                    Valorminimo = PrecioVehiculos[i][4];
                                     vehiculo = i;
                                 }
                             }
@@ -189,6 +189,43 @@ public class App {
                 
                 // --------------------------------------------------Buscar el auto entre el rango de precio--------------------------------------------------
                 case 3:
+
+                    int minimo = 0;
+                    int maximo = 0;
+
+                    for (int i = 0; i < 4; i++) {
+                    String minimoString = JOptionPane.showInputDialog("Valor minimo: ");
+                        if(minimoString != null && minimoString.matches("[0-9]+")){
+                            minimo = Integer.parseInt(minimoString);
+                            break;
+                        }else{
+                            JOptionPane.showMessageDialog(null, "El dato digitado no es valido, por favor intentelo de nuevo");
+                            i--;
+                            continue;
+                        }
+                    }
+
+                    for (int i = 0; i < 4; i++) {
+                    String maximoString = JOptionPane.showInputDialog("Valor maximo: ");
+                        if(maximoString != null && maximoString.matches("[0-9]+")){
+                            maximo = Integer.parseInt(maximoString);
+                            break;
+                        }else{
+                            JOptionPane.showMessageDialog(null, "El dato digitado no es valido, por favor intentelo de nuevo");
+                            i--;
+                            continue;
+                        }
+                    }
+
+                    System.out.println("Vehiculos entre " + minimo + " y " + maximo + ":");
+                    for (int i = 0; i < PrecioVehiculos.length; i++) {
+                        for (int j = 0; j < PrecioVehiculos[i].length; j++) {
+                            if(PrecioVehiculos[i][j] > minimo && PrecioVehiculos[i][j] < maximo){
+                                System.out.println("Marca: " + NombreVehiculos[i] + " - Año: " + AñoVehiculo[j]);
+                            }
+                        }
+                    }
+
                     break;
 
                 default:
