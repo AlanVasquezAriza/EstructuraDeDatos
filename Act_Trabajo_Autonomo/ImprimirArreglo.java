@@ -1,7 +1,7 @@
 package guia.pkg01;
 public class ImprimirArreglo {
 
-    public static <T> void imprimirArreglo(T[] arreglo) {
+    public static <T> void imprimirArreglo2(T[] arreglo) {
         for (T elemento : arreglo) {
             System.out.println(elemento);
         }
@@ -12,9 +12,9 @@ public class ImprimirArreglo {
         String[] palabras = {"Hola", "Mundo", "Java"};
 
         System.out.println("Números:");
-        imprimirArreglo(numeros);
+        imprimirArreglo2(numeros);
 
         System.out.println("Palabras:");
-        imprimirArreglo(palabras);
+        imprimirArreglo2(palabras);
     }
 }
