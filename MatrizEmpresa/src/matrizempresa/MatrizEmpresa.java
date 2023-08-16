@@ -15,7 +15,14 @@ public class MatrizEmpresa {
             System.out.println("Ventas de la sede " + (i+1));
 
             for(int j=0;j<ventas[i].length;j++){
-                ventas[i][j] = in.nextInt();
+                try{
+                    ventas[i][j] = in.nextInt();
+                }
+                catch(Exception e){
+                    System.out.println("Ingrese un numero");
+                    in.next(); //Se limpia la entrada inválida del scanner
+                    j--;
+                }
             }
         }
     }
