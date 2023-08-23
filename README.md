@@ -134,7 +134,7 @@ Adicional responda las siguientes preguntas Orientadoras
 
    a. 7
    
-   b. 5
+   _**b. 5**_
    
    c. 6
    
@@ -146,7 +146,7 @@ Adicional responda las siguientes preguntas Orientadoras
    
    a. La cantidad total de elementos de la matriz.
 
-   b. La cantidad total de filas de la matriz
+  _**b. La cantidad total de filas de la matriz**_
 
    c. La cantidad de caracteres de un elemento
 
@@ -162,7 +162,7 @@ a. 10
 
 b. 11
 
-c. 14
+_**c. 14**_
 
 d. 0
 
