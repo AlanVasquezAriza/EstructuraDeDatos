@@ -99,8 +99,18 @@ NetBeans, para el siguiente caso utilizando ArrayList:
    pertinentes para verificar que se cumple con los requerimientos.
    
       a) Especificar las causas de error que tuvo durante el desarrollo de la guía.
+
+   **• Sintaxis incorrecta**: Errores de escritura en el código, como olvidar un punto y coma al final de una línea, utilizar mayúsculas y minúsculas          incorrectamente en nombres de variables o métodos, o cometer errores tipográficos.
+   
+   **• Lógica incorrecta**: Comprender mal los requisitos del problema y desarrollar la lógica incorrecta para resolverlos puede llevar a resultados incorrectos. Esto puede incluir errores en cálculos, comparaciones o manipulación de datos.
+   
+   **• Errores en la manipulación de datos**: Al trabajar con arreglos y estructuras de datos, es posible cometer errores al acceder o modificar elementos. Índices fuera de rango o asignación incorrecta de valores pueden causar resultados inesperados.
+   
+   **• Problemas en la interfaz gráfica**: Al crear interfaces gráficas, errores en la disposición de componentes, falta de manejo de eventos o problemas en la comunicación entre la interfaz y la lógica subyacente pueden causar fallos en la ejecución.
    
       b) Escribir las conclusiones de la práctica realizada.
+   
+   • La práctica realizada proporcionó valiosos aprendizajes en términos de programación, resolución de problemas y desarrollo de habilidades técnicas.
    
       c) Incluir la bibliografía consultada. Normas APA.
    
@@ -119,6 +129,11 @@ NetBeans, para el siguiente caso utilizando ArrayList:
 ¿Cuales fueron los aprendizajes obtenidos al realizar esta guía?, liste como mínimo 3
 aprendizajes y relaciónelos con su futuro que hacer profesional.
 
+**• Manejo de estructuras de datos en Java:** Aprendí a trabajar con arreglos unidimensionales y bidimensionales, así como con la estructura de datos ArrayList. Estos conocimientos son esenciales para desarrollar soluciones eficientes y flexibles en programación.
+
+**• Interfaz gráfica en NetBeans:** A través de la creación de interfaces gráficas en NetBeans, adquirí experiencia en la construcción de aplicaciones más amigables para el usuario. Esto es valioso para crear software que sea más accesible y fácil de usar.
+
+**• Análisis de problemas y soluciones:** Enfrenté desafíos como el cálculo de promedios, búsqueda de valores extremos y manipulación de datos en matrices. Aprendí a analizar problemas complejos y a diseñar soluciones estructuradas y efectivas.
 ¿Donde presento mayor dificultad resolviendo la guía? y como lo resolvieron cuales fueron las
 estrategias de solución?
 
@@ -134,7 +149,7 @@ Adicional responda las siguientes preguntas Orientadoras
 
    a. 7
    
-   b. 5
+   _**b. 5**_
    
    c. 6
    
@@ -146,7 +161,7 @@ Adicional responda las siguientes preguntas Orientadoras
    
    a. La cantidad total de elementos de la matriz.
 
-   b. La cantidad total de filas de la matriz
+  _**b. La cantidad total de filas de la matriz**_
 
    c. La cantidad de caracteres de un elemento
 
@@ -162,7 +177,7 @@ a. 10
 
 b. 11
 
-c. 14
+_**c. 14**_
 
 d. 0
 
