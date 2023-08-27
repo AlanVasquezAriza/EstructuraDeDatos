@@ -2,13 +2,15 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class Metodos {
-
+    
     //crear un ArrayList bidimensional de enteros vacío 
     ArrayList<ArrayList<Integer>> matriz = new ArrayList();
     ArrayList<String> busesRango = new ArrayList();
+    ArrayList<Double> media = new ArrayList();
 
     // Cantidad de buses
     int numBuses = 0;
+    int semana = 7;
 
     // Llenar la matriz 
     public void Registro() {
@@ -31,7 +33,7 @@ public class Metodos {
             //para cada bus se añade una nueva fila vacía
             //esto es necesario porque el arrayList se crea vacío
             matriz.add(new ArrayList<>());
-            for (int j = 0; j < 7; j++) {
+            for (int j = 0; j < semana; j++) {
 
                 // Ingresar el valor por semana
                 int ganancia = 0;
@@ -154,5 +156,27 @@ public class Metodos {
             System.out.println(busesRango.get(i));
         }
 
+    }
+
+    // Media por dia mas aumento
+    public void MediaDia() {
+
+        double promedio = 0;
+        
+        for (int i = 0; i < matriz.size(); i++) {
+            for (int j = 0; j < matriz.get(i).size(); j++) {
+                promedio = 0;
+                for (int j2 = 0; j2 < matriz.size(); j2++) {
+                    promedio = promedio + matriz.get(j2).get(j);
+                }
+                promedio = promedio / matriz.size();
+                media.add(promedio);
+            }
+        }
+
+        // Mostrar los promedios
+        for (int i = 0; i < semana; i++) {
+            System.out.println("Promedio dia " + (i+1) + ": " + (media.get(i)));
+        }
     }
 }

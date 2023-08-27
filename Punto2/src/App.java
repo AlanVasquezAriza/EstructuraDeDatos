@@ -7,5 +7,6 @@ public class App {
         metodos.MayoresVentas();
         metodos.MenoresVentas();
         metodos.VentasPorRango();
+        metodos.MediaDia();
     }
 }
