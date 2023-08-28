@@ -92,8 +92,8 @@ public class Metodos {
                     dia = j + 1;
                 }
             }
+            System.out.println("Mayor cantidad de ventas fue de " + mayorValor + " el dia " + dia + " por el bus nuemero " + bus);
         }
-        System.out.println("Mayor cantidad de ventas fue de " + mayorValor + " el dia " + dia + " por el bus nuemero " + bus);
     }
 
 
@@ -115,8 +115,8 @@ public class Metodos {
                     dia = j + 1;
                 }
             }
+            System.out.println("Menor cantidad de ventas fue de " + menorValor + " el dia " + dia + " por el bus nuemero " + bus);
         }
-        System.out.println("Menor cantidad de ventas fue de " + menorValor + " el dia " + dia + " por el bus nuemero " + bus);
     }
 
 
