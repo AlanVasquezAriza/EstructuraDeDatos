@@ -1,4 +1,4 @@
-# Estructura De Datos
+# Estructura De Datos :shipit:
 
 Para facilitar el acceso a la guía de trabajo de cada semana, he organizado todo de manera ordenada y fácil de encontrar. Cada guía de trabajo se encuentra en su respectivo branch, y aquí cómo acceder a ellas:
 
