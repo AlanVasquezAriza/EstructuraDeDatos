@@ -8,13 +8,17 @@ a). Elabore un programa, en el ambiente de desarrollo NetBeans, que permita leer
 un arreglo de n números ingresados por teclado o generados aleatoriamente, ordenarlo
 y mostrarlo, haciendo uso de los algoritmos de ordenamiento Burbuja, Inserción,
 Selección, Shell y Quick Sort.(buscar los códigos en internet de cada ordenamiento)
+
 b). Halle la duración en tiempo de ejecución de cada algoritmo haciendo uso de la utilidad
 System.currentTimeMillis().
 https://www.tutorialspoint.com/java/lang/system_currenttimemillis.htm
+
 c). Haga una prueba ordenando 1000, 5000, 10000, 100000, 1000000 y 10000000
 de datos enteros aleatorios. Elabore una tabla con los resultados de cada N cantidad
 de datos frente a cada tipo de algoritmo de ordenamiento.
+
 d). Explique gráficamente en qué consiste cada uno de los ordenamientos.
+
 e). Explique gráficamente en qué consiste la complejidad algorítmica o carga
 computacional.
 
