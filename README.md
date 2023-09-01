@@ -43,7 +43,7 @@ estrategias de solución?
 - ¿Cómo compararía dos datos tipo String en Java? 
 Describa el procedimiento.
 
-  Se tiene dos variables que almacenan valores diferentes. Diseñe un algoritmo que le
+- Se tiene dos variables que almacenan valores diferentes. Diseñe un algoritmo que le
   permita intercambiar los valores entre ellas.
   
   Ejemplo:
