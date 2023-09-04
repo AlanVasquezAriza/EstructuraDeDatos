@@ -28,9 +28,16 @@ computacional.
 
 - ¿Cuales fueron los aprendizajes obtenidos al realizar esta guía?, liste como mínimo 3
 aprendizajes y relaciónelos con su futuro que hacer profesional.
+  + Aprendizaje en la implementación de varios algoritmos de ordenamiento en Java, incluyendo Burbuja, Inserción, Selección, Shell y Quick Sort.
+  + Se adquirio conocimiento sobre cómo medir el tiempo de ejecución de un programa en Java utilizando System.currentTimeMillis().
+  + Comprender la importancia de analizar la complejidad algorítmica y su relación con el rendimiento de los algoritmos de programación.
 
 - ¿Donde presento mayor dificultad resolviendo la guía? y como lo resolvieron cuales fueron las
 estrategias de solución?
+  + Una de las dificultades principales que enfrentamos fue la comprensión completa del funcionamiento de algunos algoritmos de ordenamiento, como Quick Sort y Shell Sort. Para superar esto, recurrimos a ejemplos de código y documentación en línea para comprender mejor su lógica.
+  + También nos enfrentamos a desafíos al asegurarnos de que la medición del tiempo de ejecución fuera precisa. Para abordar este problema, consultamos documentación y ejemplos específicos de Java sobre cómo utilizar System.currentTimeMillis() correctamente.
+  + La organización y presentación efectiva de los resultados en una tabla también fue un desafío. Para solucionar esto, revisamos ejemplos de informes de laboratorio y nos aseguramos de que los datos estuvieran claramente organizados.
+
 
 --- 
 
@@ -39,10 +46,60 @@ estrategias de solución?
 - ¿Cómo adiciona datos en un arreglo de nombres, de tamaño 10 desde su creación?
 
   Escriba el algoritmo en Java
+```
+public class EjemploArregloNombres {
+    public static void main(String[] args) {
+        // Crear un arreglo de nombres de tamaño 10
+        String[] nombres = new String[10];
 
+        // Añadir nombres a los elementos del arreglo
+        nombres[0] = "Ana";
+        nombres[1] = "Juan";
+        nombres[2] = "María";
+        nombres[3] = "Pedro";
+        nombres[4] = "Laura";
+        nombres[5] = "Carlos";
+        nombres[6] = "Sofía";
+        nombres[7] = "Luis";
+        nombres[8] = "Elena";
+        nombres[9] = "Miguel";
+
+        // Imprimir los nombres del arreglo
+        for (int i = 0; i < nombres.length; i++) {
+            System.out.println("Nombre " + (i + 1) + ": " + nombres[i]);
+        }
+    }
+}
+
+```
+Lo que imprime:
+```
+Nombre 1: Ana
+Nombre 2: Juan
+Nombre 3: María
+Nombre 4: Pedro
+Nombre 5: Laura
+Nombre 6: Carlos
+Nombre 7: Sofía
+Nombre 8: Luis
+Nombre 9: Elena
+Nombre 10: Miguel
+
+```
 - ¿Cómo compararía dos datos tipo String en Java? 
 Describa el procedimiento.
-
+  1. El método `equals()` compara el contenido de dos cadenas para verificar si son idénticas en términos de caracteres.
+  1. Devuelve un valor booleano (true o false) como resultado de la comparación.
+  1. El procedimiento es el siguiente:
+  1. Invoca el método `equals()` en una de las cadenas y pasa la otra cadena como argumento.
+  1. El método compara los caracteres en ambas cadenas uno por uno, verificando si son iguales.
+  1. Si todos los caracteres coinciden, devuelve `true`; de lo contrario, devuelve `false`.
+```
+String cadena1 = "Hola";
+String cadena2 = "Hola";
+boolean sonIguales = cadena1.equals(cadena2);
+System.out.println("¿Las cadenas son iguales? " + sonIguales);
+```
 - Se tiene dos variables que almacenan valores diferentes. Diseñe un algoritmo que le
   permita intercambiar los valores entre ellas.
   
@@ -53,6 +110,38 @@ Describa el procedimiento.
     var1 = 600;
     var2 = 2;
 
+```
+  public class IntercambioVariables {
+    public static void main(String[] args) {
+        int var1 = 2;
+        int var2 = 600;
+
+        // Imprimir valores antes del intercambio
+        System.out.println("Antes del intercambio:");
+        System.out.println("var1 = " + var1);
+        System.out.println("var2 = " + var2);
+
+        // Intercambiar valores utilizando una variable temporal
+        int temp = var1;
+        var1 = var2;
+        var2 = temp;
+
+        // Imprimir valores después del intercambio
+        System.out.println("Después del intercambio:");
+        System.out.println("var1 = " + var1);
+        System.out.println("var2 = " + var2);
+    }
+}
+```
+Despues del procedimiento, retorna:
+```
+Antes del intercambio:
+var1 = 2
+var2 = 600
+Después del intercambio:
+var1 = 600
+var2 = 2
+```
 --- 
 
 ### Adicional responda las siguientes preguntas Orientadoras
