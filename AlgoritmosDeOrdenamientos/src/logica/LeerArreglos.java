@@ -21,9 +21,9 @@ public class LeerArreglos {
         llenarArrayTamaño(array);
 //        obj.mostrarArray(array);
         
-        long initialTime = System.currentTimeMillis(); //Inicia el cronometro
+        long initialTime = System.nanoTime(); //Inicia el cronometro
         obj.burbujaSort(array);
-        long finishTime = System.currentTimeMillis(); //Termina el cronometro
+        long finishTime = System.nanoTime(); //Termina el cronometro
         
         return finishTime-initialTime;
     }
@@ -34,9 +34,9 @@ public class LeerArreglos {
         llenarArrayTamaño(array);
 //        obj.mostrarArray(array);
         
-        long initialTime = System.currentTimeMillis(); //Inicia el cronometro
+        long initialTime = System.nanoTime(); //Inicia el cronometro
         obj.insercionSort(array);
-        long finishTime = System.currentTimeMillis(); //Termina el cronometro
+        long finishTime = System.nanoTime(); //Termina el cronometro
         
         return finishTime-initialTime;
     }
@@ -47,9 +47,9 @@ public class LeerArreglos {
         llenarArrayTamaño(array);
 //        obj.mostrarArray(array);
         
-        long initialTime = System.currentTimeMillis(); //Inicia el cronometro
+        long initialTime = System.nanoTime(); //Inicia el cronometro
         obj.seleccionSort(array);
-        long finishTime = System.currentTimeMillis(); //Termina el cronometro
+        long finishTime = System.nanoTime(); //Termina el cronometro
         
         return finishTime-initialTime;
     }
@@ -60,9 +60,9 @@ public class LeerArreglos {
         llenarArrayTamaño(array);
 //        obj.mostrarArray(array);
         
-        long initialTime = System.currentTimeMillis(); //Inicia el cronometro
+        long initialTime = System.nanoTime(); //Inicia el cronometro
         obj.shellSort(array);
-        long finishTime = System.currentTimeMillis(); //Termina el cronometro
+        long finishTime = System.nanoTime(); //Termina el cronometro
         
         return finishTime-initialTime;
     }
@@ -73,9 +73,9 @@ public class LeerArreglos {
         llenarArrayTamaño(array);
 //        obj.mostrarArray(array);
         
-        long initialTime = System.currentTimeMillis(); //Inicia el cronometro
+        long initialTime = System.nanoTime(); //Inicia el cronometro
         obj.quickSort(array, 0, array.length-1);
-        long finishTime = System.currentTimeMillis(); //Termina el cronometro
+        long finishTime = System.nanoTime(); //Termina el cronometro
         
         return finishTime-initialTime;
     }
