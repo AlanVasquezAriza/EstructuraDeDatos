@@ -158,7 +158,7 @@ var2 = 2
     c. [4, 5, 15, 18, 12, 19, 14, 10, 8, 20]
     
     d. [15, 5, 4, 18, 12, 19, 14, 8, 10, 20]
-3. Suponga que usted tiene que ordenar la siguiente lista de números: [11, 7, 12, 14, 19, 1, 6, 18, 8,
+2. Suponga que usted tiene que ordenar la siguiente lista de números: [11, 7, 12, 14, 19, 1, 6, 18, 8,
 20]
 
 ¿Cuál de las siguientes listas representa la lista parcialmente ordenada después de tres
@@ -171,7 +171,7 @@ pasadas completas del ordenamiento por selección?
     c. [11, 7, 12, 14, 1, 6, 8, 18, 19, 20]
     
     d. [11, 7, 12, 14, 8, 1, 6, 18, 19, 20]
-5. Cuál es la búsqueda más eficiente en grandes cantidades de datos ya ordenados?
+3. Cuál es la búsqueda más eficiente en grandes cantidades de datos ya ordenados?
 
   a. Binaria
   
