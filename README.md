@@ -169,12 +169,13 @@ a. [7, 11, 12, 1, 6, 14, 8, 18, 19, 20]
     
 b. [7, 11, 12, 14, 19, 1, 6, 18, 8, 20]
     
-c. [11, 7, 12, 14, 1, 6, 8, 18, 19, 20]
+***c. [11, 7, 12, 14, 1, 6, 8, 18, 19, 20]***
     
 d. [11, 7, 12, 14, 8, 1, 6, 18, 19, 20]
+
 3. Cuál es la búsqueda más eficiente en grandes cantidades de datos ya ordenados?
 
-  a. Binaria
+  ***a. Binaria***
   
   b. Burbuja
     
