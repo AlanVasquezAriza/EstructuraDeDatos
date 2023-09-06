@@ -150,27 +150,28 @@ var2 = 2
 
   ¿Cuál de las siguientes listas representa la lista parcialmente ordenada después de tres
   pasadas completas del ordenamiento por inserción?:
+
+a. [4, 5, 12, 15, 14, 10, 8, 18, 19, 20]
     
-    a. [4, 5, 12, 15, 14, 10, 8, 18, 19, 20]
+b. [15, 5, 4, 10, 12, 8, 14, 18, 19, 20]
     
-    b. [15, 5, 4, 10, 12, 8, 14, 18, 19, 20]
+***c. [4, 5, 15, 18, 12, 19, 14, 10, 8, 20]***
     
-    c. ***[4, 5, 15, 18, 12, 19, 14, 10, 8, 20]***
-    
-    d. [15, 5, 4, 18, 12, 19, 14, 8, 10, 20]
+d. [15, 5, 4, 18, 12, 19, 14, 8, 10, 20]
+
 2. Suponga que usted tiene que ordenar la siguiente lista de números: [11, 7, 12, 14, 19, 1, 6, 18, 8,
 20]
 
 ¿Cuál de las siguientes listas representa la lista parcialmente ordenada después de tres
 pasadas completas del ordenamiento por selección?
   
-    a. [7, 11, 12, 1, 6, 14, 8, 18, 19, 20]
+a. [7, 11, 12, 1, 6, 14, 8, 18, 19, 20]
     
-    b. [7, 11, 12, 14, 19, 1, 6, 18, 8, 20]
+b. [7, 11, 12, 14, 19, 1, 6, 18, 8, 20]
     
-    c. [11, 7, 12, 14, 1, 6, 8, 18, 19, 20]
+c. [11, 7, 12, 14, 1, 6, 8, 18, 19, 20]
     
-    d. [11, 7, 12, 14, 8, 1, 6, 18, 19, 20]
+d. [11, 7, 12, 14, 8, 1, 6, 18, 19, 20]
 3. Cuál es la búsqueda más eficiente en grandes cantidades de datos ya ordenados?
 
   a. Binaria
