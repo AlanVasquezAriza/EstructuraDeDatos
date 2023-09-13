@@ -53,13 +53,13 @@ estrategias de solución?
 - ¿Cuál de los algoritmos de ordenamiento estudiados hasta ahora es el más rápido para
 ordenar grandes volúmenes de información?
 
-**QuickSort**
+   - **QuickSort**
 
 - Enumere 3 ventajas que proporcionan los algoritmos de ordenamiento.
 
- - Organizacion de datos: La ventaja clave de los algoritmos de ordenamiento es la organización sistemática de datos, lo que simplifica la búsqueda y recuperación en conjuntos ordenados. Un orden específico mejora la eficiencia de búsquedas, filtros y análisis de datos.
- - Mejora en el rendimiento: Ordenar datos mejora el rendimiento de las operaciones. Una búsqueda en una lista ordenada, como la búsqueda binaria, es mucho más eficiente que una búsqueda secuencial en una lista desordenada, lo que ahorra tiempo y recursos computacionales.
- - Facilta la deteccion de errores o duplicados: Los algoritmos de ordenamiento simplifican la identificación de duplicados en los datos, ya que cuando los datos están ordenados, los elementos duplicados tienden a estar uno al lado del otro. Además, esta organización también facilita la detección de posibles errores o inconsistencias en los datos, lo que es valioso para el control de calidad y la depuración.
+   - Organizacion de datos: La ventaja clave de los algoritmos de ordenamiento es la organización sistemática de datos, lo que simplifica la búsqueda y recuperación en conjuntos ordenados. Un orden específico mejora la eficiencia de búsquedas, filtros y análisis de datos.
+   - Mejora en el rendimiento: Ordenar datos mejora el rendimiento de las operaciones. Una búsqueda en una lista ordenada, como la búsqueda binaria, es mucho más eficiente que una búsqueda secuencial en una lista desordenada, lo que ahorra tiempo y recursos computacionales.
+   - Facilta la deteccion de errores o duplicados: Los algoritmos de ordenamiento simplifican la identificación de duplicados en los datos, ya que cuando los datos están ordenados, los elementos duplicados tienden a estar uno al lado del otro. Además, esta organización también facilita la detección de posibles errores o inconsistencias en los datos, lo que es valioso para el control de calidad y la depuración.
 
 - Suponga que usted está realizando una búsqueda secuencial en la lista ordenada [3, 5, 6, 8,
 11, 12, 14, 15, 17, 18]. ¿Si trata de buscar el 13 cuántas comparaciones necesitaría?
