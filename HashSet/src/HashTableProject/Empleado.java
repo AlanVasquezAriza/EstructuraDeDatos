@@ -15,6 +15,7 @@ public class Empleado {
     protected int numRUT = 0;
     
     protected int sueldoEmpleado = 0;
+    protected double sueldoMasCinco = 0, totalBonificaciones = 0;
     protected int array [] = new int [10];
     
     //Constructor
@@ -68,21 +69,26 @@ public class Empleado {
     }
     
     public void bonificacion5Porciento(){
-        mostrarArray();
         System.out.println();
+        System.out.println("Los empleados identificados con los siguientes RUT han sido beneficiados con aumento del 5% de su sueldo: ");
+        System.out.println("    RUT    ||    Sueldo    ||      +5%    ");
         
-        for(int i=0;i<=4;i++){
+        for(int i=0;i<=4;i++){ //Se limita el for para dar la bonificacion
             if(sueldo.containsValue(array[i])){
-                System.out.println(sueldo.containsValue(array[i]) + " " + array[i]);
-            }
-            for (Map.Entry<Integer, Integer> entry : sueldo.entrySet()) {
-                if (entry.getValue().equals(array[i])) {
-                    Integer claveCorrespondiente = entry.getKey();
-                    System.out.println("La clave correspondiente al valor '" + array[i] + "' es: " + claveCorrespondiente + "\n");
-                    break; // Detiene la búsqueda una vez que se encuentra la primera coincidencia
+            
+                for (Map.Entry<Integer, Integer> entry : sueldo.entrySet()) {
+                    if (entry.getValue().equals(array[i])) {
+                        Integer claveCorrespondiente = entry.getKey();
+                        sueldoMasCinco = (sueldo.get(claveCorrespondiente) * 0.05) + sueldo.get(claveCorrespondiente);
+                        totalBonificaciones += 0.05 * sueldo.get(claveCorrespondiente);
+                        System.out.println("    " + rut.get(claveCorrespondiente) + "    ||     " + sueldo.get(claveCorrespondiente) + "     ||    " + sueldoMasCinco);
+                        break; 
+                    }
                 }
             }
         }
+        System.out.println("Costo total de las bonificaciones: " + totalBonificaciones);
+        
     }
     
     public void OrganizarSueldos(){
@@ -94,19 +100,6 @@ public class Empleado {
             System.out.print(i + "  ");
         }
         System.out.println();
-    }
-    
-    //Getters
-    public String getNumEmpleado(){
-        return numEmpleado;
-    }
-    
-    public int getSueldoEmpleado(){
-        return sueldoEmpleado;
-    }
-
-    public int getNumRUT() {
-        return numRUT;
     }
     
 }
