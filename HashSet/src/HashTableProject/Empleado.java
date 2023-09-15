@@ -7,12 +7,11 @@ import javax.swing.JOptionPane;
 
 public class Empleado {
     
-    protected Hashtable<Integer, Integer> rut = new Hashtable<>();
-    protected Hashtable<Integer, Integer> sueldo = new Hashtable<>();
+    protected Hashtable<Integer, Empleado> rut = new Hashtable<>();
+    protected Hashtable<Integer, Empleado> sueldo = new Hashtable<>();
     protected AlgoritmoOrdenamiento algoritmo = new AlgoritmoOrdenamiento();
     protected Random random = new Random();
     
-    protected String numEmpleado = "";
     protected int numRUT = 0;
     
     protected int sueldoEmpleado = 0;
@@ -22,51 +21,62 @@ public class Empleado {
     //Constructor
     public Empleado(){}
     
+    public Empleado(String i){
+        this.sueldoEmpleado = random.nextInt(2001) + 100;
+    }
+    
+    public Empleado(int num){
+        this.numRUT = num;
+    }
+    
     //Llena los datos del empleado en los hashTable
     public void llenarRUT(int pos, int num){
-        rut.put(pos, numRUT = num);
+        rut.put(pos, new Empleado(num));
     }
     
     public void llenarSueldo(int pos){
-        sueldo.put(pos, sueldoEmpleado = random.nextInt(2001) + 100);
+        sueldo.put(pos, new Empleado("e"));
     }
     
     //Muestra la informacion de los empleados
     public void mostrarInfoEmpleado(int i){
-        System.out.println("Objeto " + (i) + " :" + rut.get(i));
+        Empleado obj = rut.get(i);
+        System.out.println("Objeto " + (i) + " :" + obj.getNumRUT());
         
-        System.out.println("Sueldo: " + sueldo.get(i) + "\n");
+        Empleado obj1 = sueldo.get(i);
+        System.out.println("Sueldo: " + obj1.getSueldoEmpleado() + "\n");
     }
     
     //Se llena un array con los los sueldos
     public void comparaPrimerosTreinta(){
         for(int i=0;i<=99;i++){
-            array[i] = sueldo.get(i);
+            Empleado obj = sueldo.get(i);
+            array[i] = obj.getSueldoEmpleado();
         }
-        //mostrarArray();
+        mostrarArray();
         OrganizarSueldos();
         //mostrarArray();
         System.out.println();
         
-//        for(int i=1;i<=99;i++){
-//            for(int j=0;j<=99;j++){
-//                
-//                if(i == 1){
-//                    if(array[0] == sueldo.get(j)){
-//                        System.out.println("**El valor: " + array[0] + " esta en la posicion " + (j));
-//                    }
-//                }
-//                
-//                if(array[i] == array[i-1]){
-//                    break;
-//                }
-//                
-//                if(array[i] == sueldo.get(j)){
-//                    System.out.println("El valor: " + array[i] + " esta en la posicion " + j);
-//                }
-//                
-//            }
-//        }
+        for(int i=1;i<=99;i++){
+            for(int j=0;j<=99;j++){
+                Empleado obj = sueldo.get(j);
+                if(i == 1){
+                    if(array[0] == obj.getSueldoEmpleado()){
+                        System.out.println("**El valor: " + array[0] + " esta en la posicion " + (j));
+                    }
+                }
+                
+                if(array[i] == array[i-1]){
+                    break;
+                }
+                
+                if(array[i] == obj.getSueldoEmpleado()){
+                    System.out.println("El valor: " + array[i] + " esta en la posicion " + j);
+                }
+                
+            }
+        }
     }
     
     public void bonificacion5Porciento(){
@@ -75,18 +85,16 @@ public class Empleado {
         System.out.println("    RUT    ||    Sueldo    ||      +5%    ");
         
         for(int i=0;i<=29;i++){ //Se limita el for para dar la bonificacion
-            if(sueldo.containsValue(array[i])){
-            
-                for (Map.Entry<Integer, Integer> entry : sueldo.entrySet()) {
-                    if (entry.getValue().equals(array[i])) {
-                        Integer claveCorrespondiente = entry.getKey();
-                        sueldoMasCinco = (sueldo.get(claveCorrespondiente) * 0.05) + sueldo.get(claveCorrespondiente);
-                        totalBonificaciones += 0.05 * sueldo.get(claveCorrespondiente);
-                        System.out.println("    " + rut.get(claveCorrespondiente) + "    ||     " + sueldo.get(claveCorrespondiente) + "     ||    " + sueldoMasCinco);
-                        break; 
-                    }
+            for (Map.Entry<Integer, Empleado> entry : sueldo.entrySet()) {
+                if (entry.getValue().getSueldoEmpleado() == array[i]) {
+                    Integer claveCorrespondiente = entry.getKey();
+                    sueldoMasCinco = (sueldo.get(claveCorrespondiente).getSueldoEmpleado() * 0.05) + sueldo.get(claveCorrespondiente).getSueldoEmpleado();
+                    totalBonificaciones += 0.05 * sueldo.get(claveCorrespondiente).getSueldoEmpleado();
+                    System.out.println("    " + rut.get(claveCorrespondiente).getNumRUT() + "    ||     " + sueldo.get(claveCorrespondiente).getSueldoEmpleado() + "     ||    " + sueldoMasCinco);
+                    break; 
                 }
             }
+            
         }
         System.out.println("Costo total de las bonificaciones: " + totalBonificaciones);
     }
@@ -94,37 +102,37 @@ public class Empleado {
     public void menorBonificacion(){
         System.out.println("\nEmpleado con menor bonificacion: ");
         Integer claveCorrespondiente = 0;
-        for (Map.Entry<Integer, Integer> entry : sueldo.entrySet()) {
-            if (entry.getValue().equals(array[0])) {
+        for (Map.Entry<Integer, Empleado> entry : sueldo.entrySet()) {
+            if (entry.getValue().getSueldoEmpleado() == array[0]) {
                 claveCorrespondiente = entry.getKey();
                 break; 
             }
         }
-        System.out.println("Rut " + rut.get(claveCorrespondiente) + " con sueldo de: " + sueldo.get(claveCorrespondiente));
+        System.out.println("Rut " + rut.get(claveCorrespondiente).getNumRUT() + " con sueldo de: " + sueldo.get(claveCorrespondiente).getSueldoEmpleado());
     }
     
     public void mayorBonificacion(){
         System.out.println("\nEmpleado con mayor bonificacion: ");
         Integer claveCorrespondiente = 0;
-        for (Map.Entry<Integer, Integer> entry : sueldo.entrySet()) {
-            if (entry.getValue().equals(array[29])) {
+        for (Map.Entry<Integer, Empleado> entry : sueldo.entrySet()) {
+            if (entry.getValue().getSueldoEmpleado() == array[29]) {
                 claveCorrespondiente = entry.getKey();
                 break; 
             }
         }
-        System.out.println("Rut " + rut.get(claveCorrespondiente) + " con sueldo de: " + sueldo.get(claveCorrespondiente));
+        System.out.println("Rut " + rut.get(claveCorrespondiente).getNumRUT() + " con sueldo de: " + sueldo.get(claveCorrespondiente).getSueldoEmpleado());
     }
     
     public void encontrarEmpleadoRut(int rutBuscar){
         Integer claveCorrespondiente = 0;
-        for (Map.Entry<Integer, Integer> entry : rut.entrySet()) {
-            if (entry.getValue().equals(rutBuscar)) {
+        for (Map.Entry<Integer, Empleado> entry : rut.entrySet()) {
+            if (entry.getValue().getNumRUT() == rutBuscar) {
                 claveCorrespondiente = entry.getKey();
                 break; 
             }
         }
         System.out.println("\nRut ingresado: " + rutBuscar);
-        System.out.println("Empleado " + claveCorrespondiente + " con rut " + rut.get(claveCorrespondiente) + " sueldo: " + sueldo.get(claveCorrespondiente));
+        System.out.println("Empleado " + claveCorrespondiente + " con rut " + rut.get(claveCorrespondiente).getNumRUT() + " sueldo: " + sueldo.get(claveCorrespondiente).getSueldoEmpleado());
     }
     
     public void OrganizarSueldos(){
@@ -136,6 +144,15 @@ public class Empleado {
             System.out.print(i + "  ");
         }
         System.out.println();
+    }
+    
+     //Getters
+    public int getSueldoEmpleado(){
+        return sueldoEmpleado;
+    }
+
+    public int getNumRUT() {
+        return numRUT;
     }
     
 }
