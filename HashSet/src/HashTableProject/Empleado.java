@@ -53,12 +53,12 @@ public class Empleado {
             Empleado obj = sueldo.get(i);
             array[i] = obj.getSueldoEmpleado();
         }
-        mostrarArray();
+        //mostrarArray();
         OrganizarSueldos();
         //mostrarArray();
         System.out.println();
         
-        for(int i=1;i<=99;i++){
+        /*for(int i=1;i<=99;i++){
             for(int j=0;j<=99;j++){
                 Empleado obj = sueldo.get(j);
                 if(i == 1){
@@ -76,7 +76,7 @@ public class Empleado {
                 }
                 
             }
-        }
+        }*/
     }
     
     public void bonificacion5Porciento(){
