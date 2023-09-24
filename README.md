@@ -43,7 +43,7 @@ Ajustar el ejercicio para que muestre un menú en donde el usuario pueda:
 
   a. String
 
-  b. Hash
+  **b. Hash**
 
   c. Binario
 
@@ -55,7 +55,7 @@ Ajustar el ejercicio para que muestre un menú en donde el usuario pueda:
   
   b. 8
   
-  c. 32
+  **c. 32**
   
   d. 64
 
