@@ -43,7 +43,7 @@ Ajustar el ejercicio para que muestre un menú en donde el usuario pueda:
 
   a. String
 
-  **b. Hash**
+  _**b. Hash**_
 
   c. Binario
 
@@ -55,7 +55,7 @@ Ajustar el ejercicio para que muestre un menú en donde el usuario pueda:
   
   b. 8
   
-  **c. 32**
+  _**c. 32**_
   
   d. 64
 
@@ -63,7 +63,7 @@ Ajustar el ejercicio para que muestre un menú en donde el usuario pueda:
 
   ![image](https://github.com/AlanVasquezAriza/EstructuraDeDatos/assets/124604196/dd94efae-b7a0-4da8-b973-45b57ed2a5cf)
 
-  a. Pila
+  _**a. Pila**_
 
   b. Cola
 
