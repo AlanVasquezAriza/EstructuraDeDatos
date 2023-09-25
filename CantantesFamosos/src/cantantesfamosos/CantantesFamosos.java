@@ -8,10 +8,17 @@ public class CantantesFamosos {
        
         ListaCantantesFamosos lista = new ListaCantantesFamosos();
         
-        int i=1;
+        int i=1, opcion = 0;
+        
         do{
-            int opcion = Integer.parseInt(JOptionPane.showInputDialog("1. Registrar cantante \n2. Mostrar lista \n3. Modificar Cantante"
+            try{
+                opcion = Integer.parseInt(JOptionPane.showInputDialog("1. Registrar cantante \n2. Mostrar lista \n3. Modificar Cantante"
                     + "\n4. Eliminar cantante \n5. Lista de discos vendidos Mayor a menor \n6. Salir "));
+            }
+            catch(Exception e){
+                System.out.println("Ingrese una opcion valida");
+            }
+            
             switch(opcion){
                 case 1:
                     //Añadir cantantes
@@ -20,7 +27,12 @@ public class CantantesFamosos {
                     break;
                 case 2:
                     //Mostrar ArrayList
-                    lista.mostrarArrayList();
+                    if(!lista.addCantantesFamosos.isEmpty()){
+                        lista.mostrarArrayList();
+                    }
+                    else{
+                        System.out.println("No se han registrado cantantes");
+                    }
                     break;
                 case 3:
                     //Modificar cantante

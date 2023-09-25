@@ -10,14 +10,21 @@ public class CantanteFamoso {
     protected String nombre = "";
     protected String nombreDisco = "";
     protected int ventaDiscos = 0;
-    protected int totalVentas = 0;
+    protected int totalVentas = 0, cuantosDiscos = 0;
     protected HashMap<String, Integer> discosVendidos = new HashMap<>();
     Scanner inStr = new Scanner(System.in);
     Scanner inInt = new Scanner(System.in);
    
     public CantanteFamoso(String nombreR){
         this.nombre  = nombreR;
-        int cuantosDiscos = Integer.parseInt(JOptionPane.showInputDialog("Cuantos discos tiene " + nombreR));
+        
+        try{
+            cuantosDiscos = Integer.parseInt(JOptionPane.showInputDialog("Cuantos discos tiene " + nombreR));
+        }
+        catch(Exception e){
+                System.out.println("Ingrese un numero");
+        }
+        
         for(int i=0;i<cuantosDiscos;i++){
             System.out.println("Nombre del disco N° " + (i+1));
             nombreDisco = inStr.nextLine();
@@ -25,6 +32,7 @@ public class CantanteFamoso {
             ventaDiscos = inInt.nextInt();
             this.discosVendidos.put(nombreDisco, ventaDiscos);
         }
+        
         for(Map.Entry<String, Integer> entry : discosVendidos.entrySet()){
             totalVentas += entry.getValue();
         }
@@ -43,7 +51,7 @@ public class CantanteFamoso {
     }
    
     public void mostrarObjeto(){
-        System.out.println("Nombre: " + this.nombre);
+        System.out.println("\nNombre: " + this.nombre);
         
         for(Map.Entry<String, Integer> entry : discosVendidos.entrySet()){
             System.out.println("Disco: " + entry.getKey() + " | Ventas: " + entry.getValue());
