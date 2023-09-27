@@ -35,7 +35,19 @@ Ajustar el ejercicio para que muestre un menú en donde el usuario pueda:
 ## Preguntas orientadoras 
 
 - ¿Cuales fueron los aprendizajes obtenidos al realizar esta guía?, liste como mínimo 3 aprendizajes y relaciónelos con su futuro que hacer profesional.
+  - __Manejo de Estructuras de Datos__: Aprendimos cómo trabajar con estructuras de datos como HashMap para almacenar y gestionar información de manera eficiente. Esto es útil en futuros proyectos donde necesite organizar y acceder a datos de manera rápida.
+    
+  - __Interacción con el Usuario__: Aprendimos a crear un menú de gestión que permite al usuario interactuar con el programa y realizar acciones específicas. Esto es esencial para desarrollar aplicaciones con una interfaz de usuario amigable.
+    
+  - __Uso de ArrayList__: Se pulio el uso de la clase ArrayList para almacenar y gestionar una lista dinámica de objetos. Esto es importante para trabajar con colecciones de datos en aplicaciones reales.
+    
+  - __Iteración y Manipulación de Datos__: Aprendimos a recorrer y manipular elementos en un ArrayList utilizando iteradores. Esto es útil para realizar operaciones en lotes en una colección de datos.
 - ¿Donde presento mayor dificultad resolviendo la guía? y como lo resolvieron cuales fueron las estrategias de solución?
+    - __Sintaxis de Java__: Tuvimos dificultades para entender la sintaxis de Java, especialmente al declarar clases y métodos. Esto resultó en errores de compilación frecuentes. Para superar esta dificultad, abordamos la revisión detallada de la documentación oficial de Java y la consulta de recursos en línea que explicaban la sintaxis. Además, utilizamos herramientas de desarrollo que resaltaban los errores de sintaxis, lo que nos ayudó a corregirlos de manera efectiva.
+    
+    - **Lógica de Programación**: Encontramos desafíos al desarrollar la lógica para las operaciones de gestión de estudiantes, como agregar, modificar o eliminar datos. Comprender cómo manejar bucles y condicionales fue complicado. Para superar esta dificultad, optamos por dividir el problema en pasos más pequeños. Utilizamos un enfoque de descomposición de problemas, escribiendo pseudocódigo antes de la codificación real. Esta estrategia nos ayudó a aclarar la lógica de programación.
+    
+    - **Conceptos de Programación Orientada a Objetos**: A veces, enfrentamos dificultades para comprender y aplicar conceptos de programación orientada a objetos, como la creación de clases y el uso de estructuras de datos. Para mejorar nuestra comprensión de la programación orientada a objetos, recurrimos a tutoriales en línea, ejemplos prácticos y la revisión de conceptos fundamentales. También participamos en discusiones en grupo para aclarar dudas y consolidar el conocimiento.
 
 ## Presaberes requeridos
 
