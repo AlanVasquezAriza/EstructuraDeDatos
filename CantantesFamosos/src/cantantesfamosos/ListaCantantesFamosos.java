@@ -14,25 +14,34 @@ public class ListaCantantesFamosos {
     }
     
     public void mostrarArrayList(){
-        for(int i=0;i<addCantantesFamosos.size();i++){
-            addCantantesFamosos.get(i).mostrarObjeto();
+        
+        for(Iterator<CantanteFamoso> iterator = addCantantesFamosos.iterator(); iterator.hasNext();){
+            CantanteFamoso obj = (CantanteFamoso) iterator.next();
+            obj.mostrarObjeto();
         }
+        
     }
     
     public void modificarCantante(String nombreBuscado, String nombreNuevo){
-        for(int i=0;i<addCantantesFamosos.size();i++){
-            if(addCantantesFamosos.get(i).getNombre().equals(nombreBuscado)){
-                addCantantesFamosos.get(i).setNombre(nombreNuevo);
+        
+        for(Iterator<CantanteFamoso> iterator = addCantantesFamosos.iterator(); iterator.hasNext();){
+            CantanteFamoso obj = (CantanteFamoso) iterator.next();
+            if(obj.getNombre().equals(nombreBuscado)){
+                obj.setNombre(nombreNuevo);
             }
         }
+        
     }
     
     public void eliminarCantante(String nombreEliminar){
-        for(int i=0;i<addCantantesFamosos.size();i++){
-            if(addCantantesFamosos.get(i).getNombre().equals(nombreEliminar)){
-                addCantantesFamosos.remove(i);
+        
+        for(Iterator<CantanteFamoso> iterator = addCantantesFamosos.iterator(); iterator.hasNext();){
+            CantanteFamoso obj = (CantanteFamoso) iterator.next();
+            if(obj.getNombre().equals(nombreEliminar)){
+                addCantantesFamosos.remove(obj);
             }
         }
+        
     }
     
     public void ordenarArrayCantantesDisco(){
@@ -48,8 +57,9 @@ public class ListaCantantesFamosos {
         Collections.sort(addCantantesFamosos, comparador);
 
         // Imprimir la lista ordenada
-        for (CantanteFamoso objeto : addCantantesFamosos) {
-            objeto.mostrarObjeto();
+        for(Iterator<CantanteFamoso> iterator = addCantantesFamosos.iterator(); iterator.hasNext();){
+            CantanteFamoso obj = (CantanteFamoso) iterator.next();
+            obj.mostrarObjeto();
         }
     }
    
