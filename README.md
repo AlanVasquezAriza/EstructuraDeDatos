@@ -93,6 +93,7 @@ Crear un informe de media página que describa como el Bitcoin encripta sus tran
 
 Como criptomoneda líder en el mundo, Bitcoin revolucionará la forma en que pensamos y realizamos transacciones financieras. La seguridad en Bitcoin es uno de sus pilares fundamentales, y gran parte de esta seguridad proviene del cifrado y la protección de las transacciones. En este informe, aprenderemos cómo Bitcoin cifra sus transacciones y por qué es un modelo a seguir en términos de seguridad en el mundo de las criptomonedas.
 
+![image](https://github.com/AlanVasquezAriza/EstructuraDeDatos/assets/84252258/f6b9c740-02fe-4cac-8bb3-6c9d85a4eebb)
 ## Criptografía asimétrica: la base de Bitcoin
 
 El cifrado de transacciones en Bitcoin se basa en el principio de **criptografía asimétrica**, un enfoque que implica el uso de dos claves diferentes:
@@ -120,6 +121,12 @@ Bitcoin utiliza una conexión segura a través del protocolo **"HTTPS** para gar
 La importancia de la seguridad en Bitcoin es el algoritmo de **prueba de trabajo (Proof of Work)**. Los mineros de Bitcoin luchan por resolver matemáticas complejas utilizando enormes cantidades de potencia informática. Cuando un minero resuelve un rompecabezas, agrega un nuevo bloque cerrado y es recompensado con monedas. Este proceso de "exageración" hace que la red sea segura y resistente a los ataques, ya que un atacante necesitaría una cantidad impar de potencia informática para interrumpir la red.
 
 ## Conclusión
+
+
+<p align="center">
+  <img src="https://revistas.uasb.edu.ec/index.php/foro/article/download/2800/2620/9713" alt="Texto alternativo">
+</p>
+
 
 El cifrado de transacciones de Bitcoin es un ejemplo fantástico de cómo la criptografía y la seguridad informática trabajan juntas para garantizar la privacidad, la integridad y la autenticidad en las transacciones financieras digitales. El uso de claves públicas y privadas, firmas digitales, hashes, protocolos de comunicación seguros y algoritmos de prueba de trabajo son pilares fundamentales del diseño de seguridad de Bitcoin.
 
