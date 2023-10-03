@@ -88,3 +88,39 @@ Ajustar el ejercicio para que muestre un menú en donde el usuario pueda:
 ## Actividad de trabajo autonomo
 
 Crear un informe de media página que describa como el Bitcoin encripta sus transacciones
+
+# Informe: Cifrado de transacciones de Bitcoin
+
+Como criptomoneda líder en el mundo, Bitcoin revolucionará la forma en que pensamos y realizamos transacciones financieras. La seguridad en Bitcoin es uno de sus pilares fundamentales, y gran parte de esta seguridad proviene del cifrado y la protección de las transacciones. En este informe, aprenderemos cómo Bitcoin cifra sus transacciones y por qué es un modelo a seguir en términos de seguridad en el mundo de las criptomonedas.
+
+## Criptografía asimétrica: la base de Bitcoin
+
+El cifrado de transacciones en Bitcoin se basa en el principio de **criptografía asimétrica**, un enfoque que implica el uso de dos claves diferentes:
+
+- **Clave pública:** Esta clave es conocida por todos los participantes de la red y se utiliza para cifrar la información enviada en una transacción.
+
+- **Clave privada:** Esta clave está oculta al propietario y se utiliza para descifrar la información cifrada. Sólo el propietario de la clave privada puede acceder a ella.
+
+La combinación de estas dos claves permite transacciones seguras en la red Bitcoin, ya que sólo el beneficiario legítimo puede acceder a los fondos.
+
+## Firma digital: prenda de identidad
+
+Bitcoin utiliza una firma digital para verificar la identidad de los participantes en la transacción. Cuando un usuario quiere enviar monedas, crea una firma digital utilizando su clave privada. Esta firma se adjunta a la transacción y se puede verificar utilizando la clave pública del remitente. Esto garantiza que la persona que realmente hace el negocio es quien dice ser, evita el robo de identidad y utiliza un garante.
+
+## Hashing: protección de la integridad
+
+Para garantizar la integridad de los datos, Bitcoin utiliza una función hash criptográfica. Cada bloque de la cadena de bloques de Bitcoin contiene un hash de los datos del bloque anterior. Cualquier cambio en los datos del bloque anterior dará como resultado un hash completamente diferente, por lo que es muy difícil cambiar los datos sin detección. Esta marca es necesaria para evitar cambios maliciosos en las transacciones y garantizar la integridad de la cadena de bloques.
+
+## Protocolo de comunicación segura
+
+Bitcoin utiliza una conexión segura a través del protocolo **"HTTPS** para garantizar la privacidad de la información transmitida entre socios de transacciones. Además, la red Bitcoin utiliza una topología descentralizada, lo que dificulta que un atacante acceda a toda la información en la red. La combinación de **criptografía de extremo a extremo** y una red descentralizada garantiza la seguridad de la transacción y protege la privacidad del usuario.
+
+## Se ha demostrado que el algoritmo funciona
+
+La importancia de la seguridad en Bitcoin es el algoritmo de **prueba de trabajo (Proof of Work)**. Los mineros de Bitcoin luchan por resolver matemáticas complejas utilizando enormes cantidades de potencia informática. Cuando un minero resuelve un rompecabezas, agrega un nuevo bloque cerrado y es recompensado con monedas. Este proceso de "exageración" hace que la red sea segura y resistente a los ataques, ya que un atacante necesitaría una cantidad impar de potencia informática para interrumpir la red.
+
+## Conclusión
+
+El cifrado de transacciones de Bitcoin es un ejemplo fantástico de cómo la criptografía y la seguridad informática trabajan juntas para garantizar la privacidad, la integridad y la autenticidad en las transacciones financieras digitales. El uso de claves públicas y privadas, firmas digitales, hashes, protocolos de comunicación seguros y algoritmos de prueba de trabajo son pilares fundamentales del diseño de seguridad de Bitcoin.
+
+Las criptomonedas evolucionan constantemente y mejoran sus propias características de seguridad para enfrentar nuevos desafíos. Estudiar y comprender el cifrado de Bitcoin es imprescindible para cualquier estudiante de ingeniería de programación que busque una comprensión más profunda de la tecnología y las criptomonedas. Bitcoin no sólo ha cambiado la forma en que pensamos sobre el dinero, sino también la forma en que entendemos la seguridad en el mundo digital.
