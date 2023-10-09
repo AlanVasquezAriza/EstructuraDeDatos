@@ -179,11 +179,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Mover"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="moverBActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="moverC">
       <Properties>
         <Property name="text" type="java.lang.String" value="Mover"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="moverCActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="actualizar">
       <Properties>

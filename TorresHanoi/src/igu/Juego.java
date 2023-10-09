@@ -68,8 +68,18 @@ public class Juego extends javax.swing.JFrame {
         });
 
         moverB.setText("Mover");
+        moverB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                moverBActionPerformed(evt);
+            }
+        });
 
         moverC.setText("Mover");
+        moverC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                moverCActionPerformed(evt);
+            }
+        });
 
         actualizar.setText("Actualizar");
         actualizar.addActionListener(new java.awt.event.ActionListener() {
@@ -168,6 +178,8 @@ public class Juego extends javax.swing.JFrame {
     private void actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarActionPerformed
         textTorre1.setText("");
         textTorre1.setText(pila1.mostrarNumerales(pila1));
+        textTorre2.setText(pila2.mostrarNumerales(pila2));
+        textTorre3.setText(pila3.mostrarNumerales(pila3));
         System.out.println("act");
     }//GEN-LAST:event_actualizarActionPerformed
 
@@ -189,11 +201,107 @@ public class Juego extends javax.swing.JFrame {
         
         switch(torre){
             case 1:
+                
+                int peekTorreB = pila2.peek(pila2);
+                System.out.println(peekTorreB);
+                
+                if(peekTorreB > peekTorreA || peekTorreB == 0){
+                    pila1.pop(pila1);
+                    pila2.push(peekTorreA);
+                }
+                else{
+                    System.out.println("El valor es mas grande que el peek de la torre B");
+                }
+                
                 break;
             case 2:
+                
+                int peekTorreC = pila3.peek(pila3);
+                System.out.println(peekTorreC);
+                
+                if(peekTorreC > peekTorreA || peekTorreC == 0){
+                    pila1.pop(pila1);
+                    pila3.push(peekTorreA);
+                }
+                else{
+                    System.out.println("El valor es mas grande que el peek de la torre C");
+                }
+                
                 break;
         }
     }//GEN-LAST:event_moverAActionPerformed
+
+    private void moverBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moverBActionPerformed
+        int peekTorreB = pila2.peek(pila2);
+        int torre = Integer.parseInt(JOptionPane.showInputDialog("A donde quiere mover el disco " + peekTorreB + "\n1. Torre A \n2. Torre C"));
+        
+        switch(torre){
+            case 1:
+                
+                int peekTorreA = pila1.peek(pila1);
+                System.out.println(peekTorreA);
+                
+                if(peekTorreA > peekTorreB || peekTorreA == 0){
+                    pila2.pop(pila2);
+                    pila1.push(peekTorreB);
+                }
+                else{
+                    System.out.println("El valor es mas grande que el peek de la torre A");
+                }
+                
+                break;
+            case 2:
+                
+                int peekTorreC = pila3.peek(pila3);
+                System.out.println(peekTorreC);
+                
+                if(peekTorreC > peekTorreB || peekTorreC == 0){
+                    pila2.pop(pila2);
+                    pila3.push(peekTorreB);
+                }
+                else{
+                    System.out.println("El valor es mas grande que el peek de la torre C");
+                }
+                
+                break;
+        }
+    }//GEN-LAST:event_moverBActionPerformed
+
+    private void moverCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moverCActionPerformed
+        int peekTorreC = pila3.peek(pila3);
+        int torre = Integer.parseInt(JOptionPane.showInputDialog("A donde quiere mover el disco " + peekTorreC + "\n1. Torre A \n2. Torre B"));
+        
+        switch(torre){
+            case 1:
+                
+                int peekTorreA = pila1.peek(pila1);
+                System.out.println(peekTorreA);
+                
+                if(peekTorreA > peekTorreC || peekTorreA == 0){
+                    pila3.pop(pila3);
+                    pila1.push(peekTorreC);
+                }
+                else{
+                    System.out.println("El valor es mas grande que el peek de la torre A");
+                }
+                
+                break;
+            case 2:
+                
+                int peekTorreB = pila2.peek(pila2);
+                System.out.println(peekTorreB);
+                
+                if(peekTorreB > peekTorreC || peekTorreB == 0){
+                    pila3.pop(pila3);
+                    pila2.push(peekTorreC);
+                }
+                else{
+                    System.out.println("El valor es mas grande que el peek de la torre B");
+                }
+                
+                break;
+        }
+    }//GEN-LAST:event_moverCActionPerformed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -28,6 +28,7 @@ public class Pilas {
         if (isEmpty()) {
             // Inicializa la pila con el nuevo valor.
             primero = nuevo;
+            ultimo = nuevo;
         }
         // Caso contrario agrega el nuevo nodo al inicio de la pila.
         else{
@@ -46,7 +47,7 @@ public class Pilas {
             // Asigna como primer nodo al siguiente de la pila.
             primero = primero.getEnlace();
             // Decrementa el contador del tamaño de la pila
-            System.out.println("Enlace: " + primero); //El ultimo enlace es null
+            // System.out.println("Enlace: " + primero + " " + ultimo.getDato()); //El ultimo enlace es null
             tamaño--;
         }
         else{
