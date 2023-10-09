@@ -7,8 +7,19 @@ public class TorresHanoiM {
 
     public static void main(String[] args) {
         
-        int cantidadDiscos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cantidad de discos"));
+        int cantidadDiscos = 0; 
+        int i=1;
         
+        while(i == 1){
+            i = 0;
+            try{
+                cantidadDiscos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cantidad de discos"));
+            }
+            catch(Exception e){
+                System.out.println("Ingrese un numero");
+                i = 1;
+            }
+        }
         
         Juego pantalla = new Juego(cantidadDiscos);
         pantalla.setVisible(true);
