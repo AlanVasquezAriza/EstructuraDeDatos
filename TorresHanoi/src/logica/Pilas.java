@@ -20,42 +20,36 @@ public class Pilas {
     //Agrega un dato en la ultima posicion
     public void push(int dato){
         
-        Nodo nodo = new Nodo();
-        
-        if(isEmpty()){
-            primero = nodo;
-            ultimo = nodo;
-            nodo.enlace = null;
-            nodo.setDato(dato);
+        // Define un nuevo nodo.
+        Nodo nuevo = new Nodo();
+        // Agrega al valor al nodo.
+        nuevo.setDato(dato);
+        // Consulta si la pila esta vacia.
+        if (isEmpty()) {
+            // Inicializa la pila con el nuevo valor.
+            primero = nuevo;
         }
+        // Caso contrario agrega el nuevo nodo al inicio de la pila.
         else{
-            nodo.enlace = null;
-            ultimo.enlace = nodo;
-            ultimo = nodo;
-            nodo.setDato(dato);
+            nuevo.setEnlace(primero);
+            primero = nuevo;
         }
-        
-        tamaño ++;
+        // Incrementa el contador del tamaño.
+        tamaño++;
         
     }
     
     //Elimina el ultimo dato en la pila
     public void pop(Pilas pila){
         
-        Nodo eliminar = null;
-        Nodo aux = pila.primero;
-        
-        for(int i=0;i<pila.tamaño;i++){
-            if(i == (pila.tamaño)-2){
-                
-                eliminar = aux.enlace;
-                ultimo = aux;
-                ultimo.enlace=null;
-                //eliminar = null;
-                
-                tamaño--;
-            }
-            aux = aux.enlace;
+        if (!isEmpty()) {
+            // Asigna como primer nodo al siguiente de la pila.
+            primero = primero.getEnlace();
+            // Decrementa el contador del tamaño de la pila
+            tamaño--;
+        }
+        else{
+            System.out.println("Esta vacia");
         }
         
     }
@@ -63,13 +57,15 @@ public class Pilas {
     //Devuelve el ultimo dato en la pila
     public int peek(Pilas pila){
         
-        Nodo aux = pila.primero;
+        int dato = 0;
         
-        while(aux != pila.ultimo){
-            aux = aux.enlace;
+        if(!isEmpty()){
+            dato = primero.getDato();
+        } 
+        else {
+            System.out.println("La pila se encuentra vacia.");
         }
-        
-        return aux.getDato();
+        return dato;
     }
     
     //Devuelve una cadena de "#" con el dato en cada posicion
@@ -110,7 +106,7 @@ public class Pilas {
                 aux = aux.enlace;
             }
             
-            for(int i=array.length-1;i>=0;i--){
+            for(int i=0;i<array.length;i++){
                 str += "#".repeat(array[i]) + "\n";
             }
             
