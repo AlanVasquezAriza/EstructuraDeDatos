@@ -1,5 +1,6 @@
 package igu;
 
+import javax.swing.JOptionPane;
 import logica.Pilas;
 
 public class Juego extends javax.swing.JFrame {
@@ -32,13 +33,12 @@ public class Juego extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        mover1 = new javax.swing.JButton();
-        mover2 = new javax.swing.JButton();
-        mover3 = new javax.swing.JButton();
+        moverA = new javax.swing.JButton();
+        moverB = new javax.swing.JButton();
+        moverC = new javax.swing.JButton();
         actualizar = new javax.swing.JButton();
         iniciar = new javax.swing.JButton();
         limpiar = new javax.swing.JButton();
-        pop = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -54,17 +54,22 @@ public class Juego extends javax.swing.JFrame {
         textTorre3.setRows(5);
         jScrollPane3.setViewportView(textTorre3);
 
-        jLabel1.setText("Torre 1");
+        jLabel1.setText("Torre A");
 
-        jLabel2.setText("Torre 2");
+        jLabel2.setText("Torre B");
 
-        jLabel3.setText("Torre 3");
+        jLabel3.setText("Torre C");
 
-        mover1.setText("Mover");
+        moverA.setText("Mover");
+        moverA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                moverAActionPerformed(evt);
+            }
+        });
 
-        mover2.setText("Mover");
+        moverB.setText("Mover");
 
-        mover3.setText("Mover");
+        moverC.setText("Mover");
 
         actualizar.setText("Actualizar");
         actualizar.addActionListener(new java.awt.event.ActionListener() {
@@ -87,13 +92,6 @@ public class Juego extends javax.swing.JFrame {
             }
         });
 
-        pop.setText("pop");
-        pop.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                popActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -108,34 +106,29 @@ public class Juego extends javax.swing.JFrame {
                 .addGap(109, 109, 109))
             .addGroup(layout.createSequentialGroup()
                 .addGap(79, 79, 79)
-                .addComponent(mover1)
+                .addComponent(moverA)
                 .addGap(182, 182, 182)
-                .addComponent(mover2)
+                .addComponent(moverB)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(mover3)
+                .addComponent(moverC)
                 .addGap(80, 80, 80))
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(323, 323, 323)
-                        .addComponent(actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(239, 239, 239)
                         .addComponent(iniciar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(limpiar)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(pop)
-                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -153,24 +146,27 @@ public class Juego extends javax.swing.JFrame {
                     .addComponent(jScrollPane3))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(mover1)
-                    .addComponent(mover2)
-                    .addComponent(mover3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(actualizar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(iniciar)
-                    .addComponent(limpiar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pop)
-                .addGap(20, 20, 20))
+                    .addComponent(moverA)
+                    .addComponent(moverB)
+                    .addComponent(moverC))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(iniciar)
+                            .addComponent(limpiar))
+                        .addGap(48, 48, 48))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(actualizar)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarActionPerformed
+        textTorre1.setText("");
         textTorre1.setText(pila1.mostrarNumerales(pila1));
         System.out.println("act");
     }//GEN-LAST:event_actualizarActionPerformed
@@ -187,9 +183,17 @@ public class Juego extends javax.swing.JFrame {
         textTorre3.setText("");
     }//GEN-LAST:event_limpiarActionPerformed
 
-    private void popActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_popActionPerformed
-        pila1.pop(pila1);
-    }//GEN-LAST:event_popActionPerformed
+    private void moverAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moverAActionPerformed
+        int peekTorreA = pila1.peek(pila1);
+        int torre = Integer.parseInt(JOptionPane.showInputDialog("A donde quiere mover el disco " + peekTorreA + "\n1. Torre B \n2. Torre C"));
+        
+        switch(torre){
+            case 1:
+                break;
+            case 2:
+                break;
+        }
+    }//GEN-LAST:event_moverAActionPerformed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -202,10 +206,9 @@ public class Juego extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JButton limpiar;
-    private javax.swing.JButton mover1;
-    private javax.swing.JButton mover2;
-    private javax.swing.JButton mover3;
-    private javax.swing.JButton pop;
+    private javax.swing.JButton moverA;
+    private javax.swing.JButton moverB;
+    private javax.swing.JButton moverC;
     private javax.swing.JTextArea textTorre1;
     private javax.swing.JTextArea textTorre2;
     private javax.swing.JTextArea textTorre3;

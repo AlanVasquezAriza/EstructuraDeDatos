@@ -34,17 +34,17 @@
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
-              <Component id="mover1" min="-2" max="-2" attributes="0"/>
+              <Component id="moverA" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="182" max="-2" attributes="0"/>
-              <Component id="mover2" min="-2" max="-2" attributes="0"/>
+              <Component id="moverB" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="mover3" min="-2" max="-2" attributes="0"/>
+              <Component id="moverC" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
@@ -52,22 +52,15 @@
                       <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="323" max="-2" attributes="0"/>
-                      <Component id="actualizar" min="-2" pref="91" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="239" max="-2" attributes="0"/>
                       <Component id="iniciar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="actualizar" min="-2" pref="91" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="limpiar" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="pop" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -90,20 +83,25 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="mover1" min="-2" max="-2" attributes="0"/>
-                  <Component id="mover2" min="-2" max="-2" attributes="0"/>
-                  <Component id="mover3" min="-2" max="-2" attributes="0"/>
+                  <Component id="moverA" min="-2" max="-2" attributes="0"/>
+                  <Component id="moverB" min="-2" max="-2" attributes="0"/>
+                  <Component id="moverC" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="actualizar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="iniciar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="limpiar" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace pref="34" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="iniciar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="limpiar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="actualizar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="pop" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -156,30 +154,33 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Torre 1"/>
+        <Property name="text" type="java.lang.String" value="Torre A"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Torre 2"/>
+        <Property name="text" type="java.lang.String" value="Torre B"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Torre 3"/>
+        <Property name="text" type="java.lang.String" value="Torre C"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="mover1">
+    <Component class="javax.swing.JButton" name="moverA">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Mover"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="moverAActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="moverB">
       <Properties>
         <Property name="text" type="java.lang.String" value="Mover"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="mover2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Mover"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="mover3">
+    <Component class="javax.swing.JButton" name="moverC">
       <Properties>
         <Property name="text" type="java.lang.String" value="Mover"/>
       </Properties>
@@ -206,14 +207,6 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="limpiarActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="pop">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="pop"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="popActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

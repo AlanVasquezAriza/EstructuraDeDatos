@@ -29,8 +29,6 @@ public class TorresHanoiM {
 //        
 //        System.out.println("peek: " + pila1.peek(pila1));
 //        
-//        
-//        
 //        System.out.println("");
 //        
 //        System.out.println(pila1.mostrar(pila1));

@@ -46,6 +46,7 @@ public class Pilas {
             // Asigna como primer nodo al siguiente de la pila.
             primero = primero.getEnlace();
             // Decrementa el contador del tamaño de la pila
+            System.out.println("Enlace: " + primero); //El ultimo enlace es null
             tamaño--;
         }
         else{
@@ -61,7 +62,7 @@ public class Pilas {
         
         if(!isEmpty()){
             dato = primero.getDato();
-        } 
+        }
         else {
             System.out.println("La pila se encuentra vacia.");
         }
