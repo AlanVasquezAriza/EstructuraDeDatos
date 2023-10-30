@@ -46,7 +46,7 @@ estrategias de solución?
 - ¿Cómo adiciona datos en un arreglo de nombres, de tamaño 10 desde su creación?
 
   Escriba el algoritmo en Java
-```
+```java
 public class EjemploArregloNombres {
     public static void main(String[] args) {
         // Crear un arreglo de nombres de tamaño 10
@@ -73,7 +73,7 @@ public class EjemploArregloNombres {
 
 ```
 Lo que imprime:
-```
+```java
 Nombre 1: Ana
 Nombre 2: Juan
 Nombre 3: María
@@ -94,7 +94,7 @@ Describa el procedimiento.
   1. Invoca el método `equals()` en una de las cadenas y pasa la otra cadena como argumento.
   1. El método compara los caracteres en ambas cadenas uno por uno, verificando si son iguales.
   1. Si todos los caracteres coinciden, devuelve `true`; de lo contrario, devuelve `false`.
-```
+```java
 String cadena1 = "Hola";
 String cadena2 = "Hola";
 boolean sonIguales = cadena1.equals(cadena2);
@@ -110,7 +110,7 @@ System.out.println("¿Las cadenas son iguales? " + sonIguales);
     var1 = 600;
     var2 = 2;
 
-```
+```java
   public class IntercambioVariables {
     public static void main(String[] args) {
         int var1 = 2;
@@ -134,7 +134,7 @@ System.out.println("¿Las cadenas son iguales? " + sonIguales);
 }
 ```
 Despues del procedimiento, retorna:
-```
+```java
 Antes del intercambio:
 var1 = 2
 var2 = 600
