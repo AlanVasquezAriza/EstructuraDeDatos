@@ -145,7 +145,12 @@ El árbol de códigos Huffman se utiliza en una amplia gama de aplicaciones, inc
 
 4. **Compresión de Texto**: En la compresión de documentos de texto, los códigos Huffman se utilizan para reducir el tamaño de archivos de texto, como documentos PDF.
 
-[Algoritmo De Huffman](CompresorHuffman/src/compresorhuffman/CompresorHuffman.java)
+| Codigo | Explicación |
+| :---: | :---: |
+| [Click Here](CompresorHuffman/src/compresorhuffman/CompresorHuffman.java)    | [Click Here](ExplicacionHuffman.md)    |
+
+
+
 
 # **Preguntas Orientadoras**
 
