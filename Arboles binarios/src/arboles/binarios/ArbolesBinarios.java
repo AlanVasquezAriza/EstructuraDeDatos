@@ -22,8 +22,8 @@ public class ArbolesBinarios {
             switch(opcion){
                 case 1:
                     //Entero
-                    arbol.insertarNodoCadena("45,23,2,7,65,38,52,96,48");
-                    
+                    //arbol.insertarNodoCadena("45,23,2,7,65,38,52,96,48");
+                    arbol.insertarNodoCadena("45,23,2,1,7,65,50,70");
                     System.out.print("In-Orden: ");
                     ArbolBinario.inOrdenInt(arbol.getRaiz());
                     System.out.println();
@@ -38,6 +38,10 @@ public class ArbolesBinarios {
                     System.out.println("\nAltura del arbol: " + arbol.retornarAltura());
                     
                     arbol.busquedaEnAmplitudInt();
+                    
+                    System.out.println();
+                    
+                    System.out.println("Grado del arbol: " + arbol.calcularGrado());
                     
                     pantalla = new ArbolBinarioGraficoString(arbol, 1);
                     pantalla.setVisible(true);
@@ -71,6 +75,8 @@ public class ArbolesBinarios {
                     System.out.println("\nAltura del arbol: " + arbol.retornarAltura());
                     
                     arbol.busquedaEnAmplitudString();
+                    
+                    System.out.println("\nGrado del arbol: " + arbol.calcularGrado());
                     
                     pantalla = new ArbolBinarioGraficoString(arbol, 2);
                     pantalla.setVisible(true);

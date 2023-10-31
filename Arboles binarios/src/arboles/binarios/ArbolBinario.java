@@ -160,15 +160,17 @@ public class ArbolBinario {
         cola.offer(raiz); // Agrega la raíz a la cola
 
         while (!cola.isEmpty()) {
-            Nodo nodoActual = cola.poll(); // Obtiene el primer nodo de la cola
+            Nodo nodoActual = cola.poll(); // Obtiene el primer nodo de la cola y lo elimina
             System.out.print(nodoActual.datoInt + " "); // Realiza la operación deseada (por ejemplo, imprimir el valor)
-
+            
             // Agrega los hijos a la cola si existen
             if (nodoActual.hijoIzquierdo != null) {
                 cola.offer(nodoActual.hijoIzquierdo);
+                //System.out.println("Agrega hijo izquierdo " + nodoActual.hijoIzquierdo.datoInt);
             }
             if (nodoActual.hijoDerecho != null) {
                 cola.offer(nodoActual.hijoDerecho);
+                //System.out.println("Agrega hijo derecho " + nodoActual.hijoDerecho.datoInt);
             }
         }
     }
@@ -188,11 +190,47 @@ public class ArbolBinario {
             // Agrega los hijos a la cola si existen
             if (nodoActual.hijoIzquierdo != null) {
                 cola.offer(nodoActual.hijoIzquierdo);
+                //System.out.println("Agrega hijo izquierdo " + nodoActual.hijoIzquierdo);
             }
             if (nodoActual.hijoDerecho != null) {
                 cola.offer(nodoActual.hijoDerecho);
+                //System.out.println("Agrega hijo derecho " + nodoActual.hijoDerecho);
             }
         }
+    }
+        
+    public int calcularGrado() {
+        return calcularGrado(raiz);
+    }
+
+    private int calcularGrado(Nodo nodo) {
+        if (nodo == null) {
+            return 0; // Un nodo nulo no tiene hijos
+        }
+
+        int gradoNodo = 0;
+
+        if (nodo.hijoIzquierdo != null) {
+            gradoNodo++; // Si el nodo tiene un hijo izquierdo, aumenta el grado en 1
+        }
+
+        if (nodo.hijoDerecho != null) {
+            gradoNodo++; // Si el nodo tiene un hijo derecho, aumenta el grado en 1
+        }
+        
+        //System.out.println("GNodo" + gradoNodo);
+        
+        // Calcula el grado máximo recursivamente en los subárboles izquierdo y derecho
+        //System.out.println("Nodo actual\t(1) " + nodo.getDatoInt());
+        int gradoIzquierdo = calcularGrado(nodo.hijoIzquierdo);
+        //System.out.println("Recursivo hijo izq " + gradoIzquierdo);
+        
+        //System.out.println("Nodo actual\t(2) " + nodo.getDatoInt());
+        int gradoDerecho = calcularGrado(nodo.hijoDerecho);
+        //System.out.println("Recursivo hijo der " + gradoDerecho);
+        
+        // Devuelve el grado máximo entre el nodo actual y sus subárboles
+        return Math.max(gradoNodo, Math.max(gradoIzquierdo, gradoDerecho));
     }
 
     public Nodo getRaiz() {

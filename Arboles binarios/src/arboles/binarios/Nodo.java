@@ -19,4 +19,22 @@ public class Nodo {
         this.hijoDerecho = null;
     }
 
+    public String getDatoString() {
+        return datoString;
+    }
+
+    public int getDatoInt() {
+        return datoInt;
+    }
+
+    public Nodo getHijoIzquierdo() {
+        return hijoIzquierdo;
+    }
+
+    public Nodo getHijoDerecho() {
+        return hijoDerecho;
+    }
+
+    
+    
 }
