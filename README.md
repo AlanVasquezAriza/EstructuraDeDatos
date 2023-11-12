@@ -67,7 +67,31 @@
 ## Preguntas Orientadoras
 - ### ¿Cuales fueron los aprendizajes obtenidos al realizar esta guía?, liste como mínimo 3 aprendizajes yrelaciónelos con su futuro que hacer profesional.
 
+Implementación de Grafos en Java:
+
+- Podrías haber aprendido a implementar grafos utilizando una matriz de adyacencia en Java. Esto es fundamental para comprender y trabajar con estructuras de datos y algoritmos relacionados con grafos.
+  
+Visualización de Grafos con Graphviz:
+
+- Si aplicaste la sugerencia de visualizar grafos utilizando Graphviz, habrías aprendido cómo representar visualmente estructuras de grafos, lo cual es valioso en áreas como la teoría de grafos y la resolución de problemas de optimización.
+  
+Uso de Herramientas Externas:
+
+- Pudiste haber aprendido a integrar tu código con herramientas externas como Graphviz para visualizar los resultados de tus estructuras de datos. Esto es útil en el mundo laboral, donde la colaboración con diversas herramientas es común.
+
 - ### ¿Donde presento mayor dificultad resolviendo la guía? y como lo resolvieron cuales fueron las estrategias de solución?
+
+Problemas con Graphviz:
+
+- Si encontraste problemas ejecutando el comando dot, podrías haber revisado la instalación de Graphviz y la configuración de tu variable de entorno PATH. Buscar soluciones en la documentación de Graphviz o en foros de desarrollo también sería una estrategia.
+
+Visualización en NetBeans:
+
+- Si enfrentaste dificultades al intentar visualizar el grafo directamente en NetBeans, podría haberse debido a problemas de configuración o dependencias faltantes. Verificar la presencia de la biblioteca GraphStream en tu proyecto y buscar ejemplos específicos de integración en NetBeans podría haber sido útil.
+
+Errores en la Implementación del Grafo:
+
+- Al implementar el grafo, podrías haber enfrentado desafíos relacionados con la lógica de tu código. Dividir el problema en pasos más pequeños, realizar pruebas unitarias y utilizar la depuración (debugging) son estrategias valiosas para identificar y corregir errores.
 
 ## Presaberes
 
@@ -77,7 +101,7 @@
 
     - b) Dirigido
 
-    - c) No Dirigido
+    - **c) No Dirigido**
 
     - d) Dígrafo
       
@@ -87,7 +111,7 @@
   
     - b. Algoritmo de VanVourer
   
-    - c. Algoritmo de Dijkstra
+    - **c. Algoritmo de Dijkstra**
   
     - d. Algoritmo de Busqueda
 
@@ -101,7 +125,7 @@ Vertice *adyacente;
   
   - a) Vértice
 
-    - b) Arista
+    - **b) Arista**
 
     - c) Grafo
 
