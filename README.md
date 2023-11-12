@@ -51,11 +51,9 @@
 
 # Sesion 2
 
-## 4 Elabore la matriz correspondiente para representar los nodos y distancias del tema seleccionado y muéstrela por pantalla.
-
-## 5 Represente el Grafo de manera gráfica, (Dibújelo en la pantalla)
-## 6. Busque en la guía y en libro del curso e implemente en el lenguaje de programación Java, el código del algoritmo Dijkstra para hallar la ruta más corta. Plantee un ejemplo dentro de su código de mínimo 10 nodos y 30 aristas.
-## 7. Busque en la guía y en el libro del e implemente en el lenguaje de programación Java, el código de los algoritmos de Prim, Floyd Warshall. La implementación debe ser sobre el mismo proyecto(Sesión 1) que ha venido trabajando con grafos.
+## 4 Elabore la matriz correspondiente para representar los nodos y distancias del tema seleccionado y muéstrela por pantalla. Represente el Grafo de manera gráfica, (Dibújelo en la pantalla)
+## 5. Busque en la guía y en libro del curso e implemente en el lenguaje de programación Java, el código del algoritmo Dijkstra para hallar la ruta más corta. Plantee un ejemplo dentro de su código de mínimo 10 nodos y 30 aristas.
+## 6. Busque en la guía y en el libro del e implemente en el lenguaje de programación Java, el código de los algoritmos de Prim, Floyd Warshall. La implementación debe ser sobre el mismo proyecto(Sesión 1) que ha venido trabajando con grafos.
 ## El ejercicio siguiente se desarrollará con el software GrafosSitio de descarga: inicio – Grafos -software para la construcción, edición y análisis de grafos. (upv.es) Entrenar su manejo
 
 <p align="center">
