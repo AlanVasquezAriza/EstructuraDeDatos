@@ -2,6 +2,25 @@
 
 ## 1.  Describa por lo menos 5 aplicaciones (usos) prácticas de los grafos.
 
+**Redes Sociales:**
+
+   - Uso: Los grafos son fundamentales en la representación de relaciones sociales en plataformas como Facebook, Twitter y LinkedIn. Cada usuario es un nodo, y las conexiones de amistad o seguimiento entre ellos se representan mediante aristas. Los algoritmos de grafos se utilizan para analizar patrones de conexión, identificar comunidades y sugerir amistades o conexiones.
+
+**Logística y Rutas:**
+
+  - Uso: Los grafos se emplean para optimizar rutas y redes logísticas. Por ejemplo, en la planificación de la entrega de paquetes, los nodos pueden representar ubicaciones y las aristas los caminos entre ellas. Los algoritmos de grafos, como el algoritmo de Dijkstra, se utilizan para encontrar la ruta más corta entre dos puntos o para optimizar la distribución de recursos.
+
+**Bases de Datos y Sistemas de Gestión de Información:**
+
+  - Uso: Los grafos son utilizados en bases de datos NoSQL orientadas a grafos para modelar y representar relaciones complejas entre entidades. Esto es especialmente útil en situaciones donde las relaciones son tan importantes como los datos en sí. Ejemplos incluyen la representación de redes de conocimiento, sistemas de recomendación y análisis de dependencias.
+
+**Circuitos Eléctricos y Electrónicos:**
+
+   - Uso: En ingeniería eléctrica y electrónica, los grafos son utilizados para modelar circuitos. Los nodos representan componentes (como resistencias, capacitores y transistores) y las aristas representan las conexiones eléctricas entre ellos. Analizar el grafo permite entender el flujo de corriente y resolver problemas en circuitos complejos.
+
+**Mapas y Sistemas de Navegación:**
+
+   - Uso: Los grafos son esenciales en la representación de mapas digitales y en sistemas de navegación. Cada intersección o ubicación clave se representa como un nodo, y las carreteras o caminos entre ellos como aristas. Los algoritmos de grafos son utilizados para encontrar rutas eficientes para la navegación vehicular o peatonal, considerando factores como la distancia, el tiempo de viaje o restricciones específicas.
 
 ## 2. Elabore una tabla sobre los algoritmos más importantes aplicables a un grafo. Especifique en qué consiste cada uno y muestre un ejemplo de aplicación.
 
