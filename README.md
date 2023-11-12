@@ -23,11 +23,12 @@
    - Uso: Los grafos son esenciales en la representación de mapas digitales y en sistemas de navegación. Cada intersección o ubicación clave se representa como un nodo, y las carreteras o caminos entre ellos como aristas. Los algoritmos de grafos son utilizados para encontrar rutas eficientes para la navegación vehicular o peatonal, considerando factores como la distancia, el tiempo de viaje o restricciones específicas.
 
 ## 2. Elabore una tabla sobre los algoritmos más importantes aplicables a un grafo. Especifique en qué consiste cada uno y muestre un ejemplo de aplicación.
+| Algoritmo         | Descripción                                       | Ejemplo de Aplicación                                       | Gráfico                                      |
+|-------------------|---------------------------------------------------|--------------------------------------------------------------|----------------------------------------------|
+| Dijkstra          | Encuentra el camino más corto desde un vértice origen a todos los demás vértices en un grafo ponderado con pesos no negativos. | Red de rutas de transporte para minimizar tiempo o costo.    | ![image](https://github.com/AlanVasquezAriza/EstructuraDeDatos/assets/124604196/b7c4061a-c2cc-44df-a925-4cfb855d3c28) |
+| Bellman-Ford      | Similar a Dijkstra pero permite manejar grafos con aristas de peso negativo, siempre que no haya ciclos de peso negativo accesibles desde el vértice de origen. | Gestión de rutas con posibles costos negativos. | ![image](https://github.com/AlanVasquezAriza/EstructuraDeDatos/assets/124604196/23d990f1-f985-4b88-9c4a-4108d4f9ea24) |
+| Floyd-Warshall    | Encuentra los caminos más cortos entre todos los pares de vértices en un grafo ponderado, ya sea dirigido o no dirigido. | Planificación de rutas en una red de comunicación. | ![image](https://github.com/AlanVasquezAriza/EstructuraDeDatos/assets/124604196/f83e6d98-3e39-4dcb-aac4-88b827e35cf4) |
 
-### Elabore un documento en Excel con las siguientes columnas:
-
-|Algoritmo| Descripción| Ejemplo| Gráfico|
-|---------|------------|--------|--------|
 
 ### Adjunte el archivo de Excel.
 
