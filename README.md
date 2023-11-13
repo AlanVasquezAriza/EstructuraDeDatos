@@ -39,7 +39,7 @@
 
 |    ↓Inicio↓       | UMB           | Portal Sur   | Portal de las Americas | Portal 80   | Portal Norte | Portal 20 de Julio | Portal el Tunal | Portal Suba | Portal Usme |
 |-----------|--------------|--------------|-------------------------|------------|-------------|-------------------|----------------|------------|------------|
-| UMB       | VACIO        | VACIO        | VACIO                   | VACIO      | VACIO       | VACIO             | VACIO          | VACIO      | VACIO      |
+| UMB       | VACIO        | 24.7Km        | 25Km                   | 12.4Km      | 15Km       | 15.6Km             | 22.7Km          | 16.1Km      | 31.7Km      |
 | Portal Sur| 19,8Km       | VACIO        | 5,6Km                   | 20,9Km     | 30,8Km      | 13,3Km            | 8,2Km          | 27,5Km    | 16,8Km    |
 | Portal de las Americas | 17,3Km | 5,7Km        | VACIO           | 13,7Km     | 26,5Km      | 14,0Km            | 9,5Km          | 24,8Km    | 18,2Km    |
 | Portal 80 | 13,5Km       | 20,3Km      | 15,9Km                  | VACIO      | 14,1Km      | 21,5Km            | 20,3Km         | 9,6Km     | 28,9Km    |
