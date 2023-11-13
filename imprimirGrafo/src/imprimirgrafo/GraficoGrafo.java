@@ -39,12 +39,40 @@ public class GraficoGrafo extends JPanel {
 
         // Define los pesos de las aristas
         pesosAristas = new int[numNodos][numNodos];
-//        pesosAristas[0][0] = 1;
-//        pesosAristas[0][0] = 2;
-//        pesosAristas[0][0] = 3;
-//        pesosAristas[0][0] = 4;
-//        pesosAristas[0][0] = 5;
-//        pesosAristas[5][0] = 6;
+        pesosAristas[0][1] = 8;
+        pesosAristas[1][0] = 8;
+        pesosAristas[1][2] = 18;
+        pesosAristas[2][1] = 18;
+        pesosAristas[2][3] = 14;
+        pesosAristas[3][2] = 14;
+        pesosAristas[3][4] = 7;
+        pesosAristas[4][3] = 7;
+        pesosAristas[4][5] = 8;
+        pesosAristas[5][4] = 8;
+        pesosAristas[5][6] = 5;
+        pesosAristas[6][5] = 5;
+        pesosAristas[6][7] = 6;
+        pesosAristas[7][6] = 6;
+        pesosAristas[7][8] = 7;
+        pesosAristas[8][7] = 7;
+        pesosAristas[8][9] = 3;
+        pesosAristas[9][8] = 3;
+        pesosAristas[9][0] = 10;
+        pesosAristas[0][9] = 10;
+        pesosAristas[1][6] = 32;
+        pesosAristas[6][1] = 32;
+        pesosAristas[2][9] = 8;
+        pesosAristas[9][2] = 8;
+        pesosAristas[2][7] = 18;
+        pesosAristas[7][2] = 18;
+        pesosAristas[2][5] = 18;
+        pesosAristas[5][2] = 18;
+        pesosAristas[7][2] = 18;
+        pesosAristas[7][2] = 18;
+        pesosAristas[3][7] = 14;
+        pesosAristas[7][3] = 14;
+        pesosAristas[3][8] = 12;
+        pesosAristas[8][3] = 12;
     }
 
     public void paintComponent(Graphics g) {
@@ -111,7 +139,7 @@ public class GraficoGrafo extends JPanel {
         JFrame frame = new JFrame("Grafo");
         GraficoGrafo grafoPanel = new GraficoGrafo();
         frame.add(grafoPanel);
-        frame.setSize(1000, 850);
+        frame.setSize(500, 850);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
