@@ -7,34 +7,44 @@ import java.awt.geom.*;
 public class GraficoGrafo extends JPanel {
 
     private int[][] grafo = {
-        {0, 1, 1, 0, 0},
-        {1, 0, 0, 1, 0},
-        {1, 0, 0, 1, 1},
-        {0, 1, 1, 0, 1},
-        {0, 0, 1, 1, 0}
+        {0, 1, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 0, 1, 0, 0, 0, 1, 0, 0, 0},
+        {0, 1, 0, 1, 0, 1, 0, 1, 0, 1},
+        {0, 0, 1, 0, 1, 0, 0, 1, 1, 0},
+        {0, 0, 0, 1, 0, 1, 0, 0, 0, 0},
+        {0, 0, 1, 0, 1, 0, 1, 0, 0, 0},
+        {0, 1, 0, 0, 0, 1, 0, 1, 0, 0},
+        {0, 0, 1, 1, 0, 0, 1, 0, 1, 0},
+        {0, 0, 0, 1, 0, 0, 0, 1, 0, 1},
+        {1, 0, 1, 0, 0, 0, 0, 0, 9, 0}
     };
 
     private int numNodos = grafo.length;
-    private int radio = 20;
+    private int radio = 20; //Tamaño del nodo
     private Point[] posicionesNodos;
     private int[][] pesosAristas;  // Matriz de pesos de las aristas
 
     public GraficoGrafo() {
         posicionesNodos = new Point[numNodos];
-        posicionesNodos[0] = new Point(100, 100);
-        posicionesNodos[1] = new Point(300, 100);
-        posicionesNodos[2] = new Point(200, 0);
-        posicionesNodos[3] = new Point(100, 300);
-        posicionesNodos[4] = new Point(300, 300);
+        posicionesNodos[0] = new Point(300, 100);
+        posicionesNodos[1] = new Point(440, 50);
+        posicionesNodos[2] = new Point(440, 440);
+        posicionesNodos[3] = new Point(360, 600);
+        posicionesNodos[4] = new Point(250, 750);
+        posicionesNodos[5] = new Point(140, 680);
+        posicionesNodos[6] = new Point(65, 590);
+        posicionesNodos[7] = new Point(20, 480);
+        posicionesNodos[8] = new Point(150, 320);
+        posicionesNodos[9] = new Point(220, 210);
 
         // Define los pesos de las aristas
         pesosAristas = new int[numNodos][numNodos];
-        pesosAristas[0][1] = 1;
-        pesosAristas[0][2] = 2;
-        pesosAristas[1][3] = 3;
-        pesosAristas[2][3] = 4;
-        pesosAristas[2][4] = 5;
-        pesosAristas[3][4] = 6;
+//        pesosAristas[0][0] = 1;
+//        pesosAristas[0][0] = 2;
+//        pesosAristas[0][0] = 3;
+//        pesosAristas[0][0] = 4;
+//        pesosAristas[0][0] = 5;
+//        pesosAristas[5][0] = 6;
     }
 
     public void paintComponent(Graphics g) {
@@ -56,7 +66,7 @@ public class GraficoGrafo extends JPanel {
             int textY = y + (int) bounds.getHeight() / 2;
             g2.drawString(nodoText, textX, textY);
 
-            for (int j = i + 1; j < numNodos; j++) {
+            for (int j = 0; j < numNodos; j++) {
                 if (grafo[i][j] == 1) {
                     int xi = posicionesNodos[i].x;
                     int yi = posicionesNodos[i].y;
@@ -101,7 +111,7 @@ public class GraficoGrafo extends JPanel {
         JFrame frame = new JFrame("Grafo");
         GraficoGrafo grafoPanel = new GraficoGrafo();
         frame.add(grafoPanel);
-        frame.setSize(400, 400);
+        frame.setSize(1000, 850);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
